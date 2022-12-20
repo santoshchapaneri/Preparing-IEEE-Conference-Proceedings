@@ -1,0 +1,48 @@
+% Author: Dr. Santosh Chapaneri
+% This file generates the TOC and Author Index for IEEE Conference Proceedings
+% To be put in the Packing List
+
+\documentclass[a4paper]{llncs_MOD}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{makeidx,showidx}
+\usepackage{index}
+
+\addtolength{\textwidth}{2cm}
+\addtolength{\hoffset}{-1cm}
+\addtolength{\textheight}{2cm}
+\addtolength{\voffset}{-1cm}
+
+\makeindex
+
+\begin{document}
+
+\tableofcontents
+
+\mainmatter
+
+\setcounter{page}{1}
+
+%***************************************************
+\addtocmark{Oral Sessions}
+
+% p1
+\title{\noindent Title of first paper}   \author{Author One\index{One, Author}, Author Two\index{Two, Author} and Author Three \index{Three, Author}} \maketitle \newpage \addtocounter{page}{5}
+
+% p2
+\title{\noindent Title of second paper}   \author{Author Four\index{Four, Author}, Author Two\index{Two, Author} and Author Five \index{Five, Author}} \maketitle \newpage \addtocounter{page}{4}
+
+%***************************************************
+
+\newpage
+\addtocounter{page}{0}
+
+\addcontentsline{toc}{title}{\protect\numberline{}\textbf{\noindent Author Index}}
+
+\printindex
+
+\end{document}
